@@ -1,0 +1,59 @@
+import { Link } from "react-router-dom";
+import { Sparkles, Linkedin, Twitter, Github } from "lucide-react";
+
+export const Footer = () => {
+  return (
+    <footer className="border-t border-border/60 mt-24">
+      <div className="container py-16 grid gap-12 md:grid-cols-4">
+        <div className="md:col-span-2 space-y-4">
+          <Link to="/" className="flex items-center gap-2 font-display text-lg font-bold">
+            <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary shadow-glow">
+              <Sparkles className="h-4 w-4 text-primary-foreground" />
+            </span>
+            <span>Northbeam<span className="text-primary">.</span></span>
+          </Link>
+          <p className="text-muted-foreground max-w-sm text-sm">
+            Performance marketing for ambitious brands. We turn ad spend into predictable, compounding revenue.
+          </p>
+          <div className="flex gap-3 pt-2">
+            {[Linkedin, Twitter, Github].map((Icon, i) => (
+              <a
+                key={i}
+                href="#"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
+                aria-label="social"
+              >
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-sm mb-4">Company</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li><Link to="/about" className="hover:text-primary">About</Link></li>
+            <li><Link to="/case-studies" className="hover:text-primary">Case studies</Link></li>
+            <li><Link to="/services" className="hover:text-primary">Services</Link></li>
+            <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-semibold text-sm mb-4">Get in touch</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li>hello@northbeam.growth</li>
+            <li>Stockholm · Remote</li>
+            <li><Link to="/contact" className="text-primary hover:underline">Start a project →</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-border/60">
+        <div className="container py-6 flex flex-col md:flex-row gap-2 items-center justify-between text-xs text-muted-foreground">
+          <p>© {new Date().getFullYear()} Northbeam Growth. All rights reserved.</p>
+          <p>Crafted with intent in HSL.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
