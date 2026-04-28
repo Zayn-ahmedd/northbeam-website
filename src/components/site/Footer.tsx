@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Linkedin, Twitter, Github } from "lucide-react";
+import { Sparkles, Linkedin, Instagram, Facebook } from "lucide-react";
+
+const socials = [
+  { Icon: Instagram, href: "https://www.instagram.com/northbeam__/", label: "Instagram" },
+  { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61588942620112", label: "Facebook" },
+  { Icon: Linkedin, href: "https://www.linkedin.com/company/115914265/admin/dashboard/", label: "LinkedIn" },
+];
 
 export const Footer = () => {
   return (
