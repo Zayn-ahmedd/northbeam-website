@@ -50,7 +50,7 @@ export const Footer = () => {
         <div>
           <h4 className="font-semibold text-sm mb-4">Get in touch</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@northbeam.growth</li>
+            <li><a href="mailto:northbeam.info@gmail.com" className="hover:text-primary">northbeam.info@gmail.com</a></li>
             <li>Stockholm · Remote</li>
             <li><Link to="/contact" className="text-primary hover:underline">Start a project →</Link></li>
           </ul>
