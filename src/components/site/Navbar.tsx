@@ -61,7 +61,7 @@ export const Navbar = () => {
 
         <div className="hidden md:block">
           <Button asChild variant="hero" size="sm" className="rounded-full">
-            <Link to="/contact">Book a strategy call</Link>
+            <a href="https://calendly.com/northbeam/30min" target="_blank" rel="noopener noreferrer">Book a strategy call</a>
           </Button>
         </div>
 
@@ -93,7 +93,7 @@ export const Navbar = () => {
               </RRNavLink>
             ))}
             <Button asChild variant="hero" className="mt-2 rounded-full">
-              <Link to="/contact">Book a strategy call</Link>
+              <a href="https://calendly.com/northbeam/30min" target="_blank" rel="noopener noreferrer">Book a strategy call</a>
             </Button>
           </div>
         </div>
