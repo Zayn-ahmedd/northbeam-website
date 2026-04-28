@@ -33,33 +33,41 @@ const Contact = () => {
       <section className="container pb-24">
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3 rounded-3xl border border-border bg-card/40 p-8 md:p-10 shadow-card">
-            <form onSubmit={onSubmit} className="space-y-5">
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST" 
+              className="space-y-5"
+            >
+              {/* ACCESS KEY - REPLACE WITH YOUR ACTUAL KEY */}
+              <input type="hidden" name="access_key" value="235bdb38-3dd8-4213-91b2-1e496fe27b88" />
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Your name</Label>
-                  <Input id="name" required placeholder="Alex Johnson" />
+                  <Input id="name" name="name" required placeholder="Alex Johnson" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Work email</Label>
-                  <Input id="email" type="email" required placeholder="alex@brand.com" />
+                  <Input id="email" name="email" type="email" required placeholder="alex@brand.com" />
                 </div>
               </div>
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="company">Company</Label>
-                  <Input id="company" required placeholder="Brand Co." />
+                  <Input id="company" name="company" required placeholder="Brand Co." />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="budget">Monthly ad spend</Label>
-                  <Input id="budget" placeholder="$10k–$50k" />
+                  <Input id="budget" name="ad_spend" placeholder="$10k–$50k" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">What are you trying to grow?</Label>
-                <Textarea id="message" required rows={5} placeholder="Tell us about your business, goals, and timeline..." />
+                <Textarea id="message" name="message" required rows={5} placeholder="Tell us about your business, goals, and timeline..." />
               </div>
-              <Button type="submit" variant="hero" size="lg" disabled={submitting} className="w-full sm:w-auto">
-                {submitting ? "Sending..." : <>Send message <ArrowRight className="h-4 w-4" /></>}
+              
+              <Button type="submit" variant="hero" size="lg" className="w-full sm:w-auto">
+                Send message <ArrowRight className="h-4 w-4 ml-2" />
               </Button>
             </form>
           </div>
@@ -67,7 +75,7 @@ const Contact = () => {
           <aside className="lg:col-span-2 space-y-4">
             {[
               { icon: Mail, title: "Email us", body: "hello@northbeam.growth" },
-              { icon: MapPin, title: "HQ", body: "Stockholm, Sweden — fully remote team" },
+              { icon: MapPin, title: "HQ", body: "Tamil Nadu, India — fully remote team" },
               { icon: Clock, title: "Response time", body: "Within 1 business day, always." },
             ].map((b) => (
               <div key={b.title} className="rounded-2xl border border-border bg-card/40 p-6 flex gap-4">

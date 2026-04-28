@@ -1,3 +1,5 @@
-# Welcome to your Lovable project
+# northbeam-website
+
+# Welcome to your project
 
 TODO: Document your project here

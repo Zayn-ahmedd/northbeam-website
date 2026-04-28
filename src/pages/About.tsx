@@ -10,10 +10,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Anton Lindqvist", role: "Founder & Strategy", initial: "AL" },
-  { name: "Sara Mendez", role: "Head of Paid Media", initial: "SM" },
-  { name: "Jonas Eriksen", role: "Head of SEO", initial: "JE" },
-  { name: "Ruth Okafor", role: "Lead Creative Strategist", initial: "RO" },
+  { name: "Ahmed Rashmi", role: "Founder & Strategy", initial: "AR" },
+  { name: "Harini", role: "Head of Paid Media", initial: "HA" },
+  { name: "Ahamed", role: "Head of SEO", initial: "AH" },
+  { name: "Deepika", role: "Lead Creative Strategist", initial: "DE" },
 ];
 
 const About = () => {
@@ -23,7 +23,7 @@ const About = () => {
         <SectionHeading
           eyebrow="About"
           title={<>A senior team obsessed with <span className="text-gradient">measurable growth</span>.</>}
-          description="Northbeam was founded in 2021 by operators who'd grown brands from zero to nine figures and were tired of agencies that hid behind vanity metrics."
+          description="Northbeam was founded in 2025 by operators who'd grown brands from zero to nine figures and were tired of agencies that hid behind vanity metrics."
         />
       </section>
 
