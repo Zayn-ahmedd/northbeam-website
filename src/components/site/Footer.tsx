@@ -22,12 +22,14 @@ export const Footer = () => {
             Performance marketing for ambitious brands. We turn ad spend into predictable, compounding revenue.
           </p>
           <div className="flex gap-3 pt-2">
-            {[Linkedin, Twitter, Github].map((Icon, i) => (
+            {socials.map(({ Icon, href, label }) => (
               <a
-                key={i}
-                href="#"
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground hover:text-primary hover:border-primary transition-smooth"
-                aria-label="social"
+                aria-label={label}
               >
                 <Icon className="h-4 w-4" />
               </a>
